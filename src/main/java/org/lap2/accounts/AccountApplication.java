@@ -77,7 +77,8 @@ public class AccountApplication {
 
             if (answer.equals("1")) {
                 System.out.println(showAccountInfo(account));
-            } else {
+            }
+            else if (answer.equals("2")){
                 System.out.print("Please enter the amount you want to withdraw: ");
                 double money = Double.parseDouble(br.readLine());
                 System.out.println(withdrawMoney(account, money));
