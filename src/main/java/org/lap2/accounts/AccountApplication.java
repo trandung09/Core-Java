@@ -83,6 +83,9 @@ public class AccountApplication {
                 double money = Double.parseDouble(br.readLine());
                 System.out.println(withdrawMoney(account, money));
             }
+            else {
+                System.out.println("Invalid input.");
+            }
 
             System.out.print("Do you want to continue? (y/n): ");
             answer = br.readLine();
