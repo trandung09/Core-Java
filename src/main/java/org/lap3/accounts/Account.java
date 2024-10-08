@@ -1,4 +1,4 @@
-package org.lap2.accounts;
+package org.lap3.accounts;
 
 import lombok.Data;
 
@@ -37,7 +37,6 @@ public class Account {
 
     @Override
     public String toString() {
-
         return "Your account info: \n\t\t" +
                 "Username: " + username + "\n\t\t" +
                 "Password: " + password + "\n\t\t" +

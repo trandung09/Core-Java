@@ -1,25 +1,17 @@
-package org.lap2.accounts;
+package org.lap3.accounts;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
-import java.util.List;
 
 public class AccountApplication {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    private final List<Account> accounts = List.of(
-            new Account("techmaster", "hoclacoviec", 1000000)
-            // ... more account
-    );
-
     private Account login(String username, String password) {
 
-        return accounts.stream()
-                .filter(a -> a.getUsername().equals(username) && a.getPassword().equals(password))
-                .findFirst().orElse(null);
+        return AccountManager.findAccount(username, password);
     }
 
     private void menu() {
@@ -39,7 +31,7 @@ public class AccountApplication {
         else {
             account.setBalance(account.getBalance() - money);
             LocalDate now = LocalDate.now();
-            return String.format("You have successfully withdrawn %.2f VND at %s", money, now.toString());
+            return String.format("You have successfully withdrawn %.2f VND at %s", money, now);
         }
     }
 
@@ -61,8 +53,9 @@ public class AccountApplication {
                 System.out.print("Do you want to continue? (y/n): ");
                 answer = br.readLine();
 
-                if (answer.equals("n")) {
-                    return;
+                if (answer.equalsIgnoreCase("n")) {
+                    System.exit(1);
+                    // return
                 }
             }
             else {
@@ -90,7 +83,7 @@ public class AccountApplication {
             System.out.print("Do you want to continue? (y/n): ");
             answer = br.readLine();
 
-        } while (!answer.equals("n"));
+        } while (answer.equalsIgnoreCase("y"));
     }
 
     public static void main(String[] args) throws IOException {
