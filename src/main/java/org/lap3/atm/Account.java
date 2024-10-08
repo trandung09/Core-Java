@@ -1,4 +1,4 @@
-package org.lap3.accounts;
+package org.lap3.atm;
 
 import lombok.Data;
 
