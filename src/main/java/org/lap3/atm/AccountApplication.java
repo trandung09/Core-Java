@@ -24,14 +24,16 @@ public class AccountApplication {
         return account.toString();
     }
 
-    private String withdrawMoney(Account account, double money) {
+    private boolean withdrawMoney(Account account, double money) {
         if (money > account.getBalance()) {
-            return "You don't have enough money.";
+            System.out.println("You don't have enough money.");
+            return false;
         }
         else {
             account.setBalance(account.getBalance() - money);
             LocalDate now = LocalDate.now();
-            return String.format("You have successfully withdrawn %.2f VND at %s", money, now);
+            System.out.printf("You have successfully withdrawn %.2f VND at %s\n", money, now);
+            return true;
         }
     }
 
@@ -75,7 +77,7 @@ public class AccountApplication {
                 case "2":
                     System.out.print("Please enter the amount you want to withdraw: ");
                     double money = Double.parseDouble(br.readLine());
-                    System.out.println(withdrawMoney(account, money));
+                    withdrawMoney(account, money);
                     break;
                 default:
                     System.out.println("Invalid input.");
