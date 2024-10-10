@@ -39,7 +39,6 @@ public class Account {
     public String toString() {
         return "Your account info: \n\t\t" +
                 "Username: " + username + "\n\t\t" +
-                "Password: " + password + "\n\t\t" +
                 "Balance: " + balance + "\n";
 
         // can use string builder...

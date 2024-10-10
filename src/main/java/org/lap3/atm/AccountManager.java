@@ -18,9 +18,9 @@ public class AccountManager {
     }
 
     public static boolean removeAccount(Account account) {
-
         if (account == null)
             return false;
+
         return accounts.remove(account);
     }
 

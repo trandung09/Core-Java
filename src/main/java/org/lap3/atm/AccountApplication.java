@@ -68,16 +68,17 @@ public class AccountApplication {
             System.out.print("Please enter your choose: ");
             answer = br.readLine();
 
-            if (answer.equals("1")) {
-                System.out.println(showAccountInfo(account));
-            }
-            else if (answer.equals("2")){
-                System.out.print("Please enter the amount you want to withdraw: ");
-                double money = Double.parseDouble(br.readLine());
-                System.out.println(withdrawMoney(account, money));
-            }
-            else {
-                System.out.println("Invalid input.");
+            switch (answer) {
+                case "1":
+                    System.out.println(showAccountInfo(account));
+                    break;
+                case "2":
+                    System.out.print("Please enter the amount you want to withdraw: ");
+                    double money = Double.parseDouble(br.readLine());
+                    System.out.println(withdrawMoney(account, money));
+                    break;
+                default:
+                    System.out.println("Invalid input.");
             }
 
             System.out.print("Do you want to continue? (y/n): ");
