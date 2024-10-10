@@ -11,13 +11,15 @@ public class AccountManager {
     );
 
     public static boolean addAccount(Account account) {
-        if (account == null)
-            return false;
+
+        if (account == null) return false;
+        if (accounts.contains(account)) return false;
 
         return accounts.add(account);
     }
 
     public static boolean removeAccount(Account account) {
+
         if (account == null)
             return false;
 
@@ -25,6 +27,7 @@ public class AccountManager {
     }
 
     public static Account findAccount(String username, String password) {
+
         return accounts.stream()
                 .filter(a -> a.getUsername().equalsIgnoreCase(username)
                         && a.getPassword().equalsIgnoreCase(password))

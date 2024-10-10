@@ -18,6 +18,13 @@ public class BookManager {
                 // ... more books
     );
 
+    public static boolean addBook(Book book) {
+
+        if( book == null ) return false;
+        if (books.contains(book)) return false;
+
+        return books.add(book);
+    }
 
     public static Book findBookByName(String name) {
 
