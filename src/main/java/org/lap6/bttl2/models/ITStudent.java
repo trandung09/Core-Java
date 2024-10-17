@@ -1,4 +1,4 @@
-package org.lap6.bttl2;
+package org.lap6.bttl2.models;
 
 import lombok.Getter;
 import lombok.Setter;

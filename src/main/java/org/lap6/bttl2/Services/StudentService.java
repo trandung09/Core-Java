@@ -1,32 +1,20 @@
 package org.lap6.bttl2.Services;
 
-import org.lap6.bttl2.BizStudent;
-import org.lap6.bttl2.ITStudent;
-import org.lap6.bttl2.TechmasterStudent;
+import java.io.BufferedReader;
+import java.io.IOException;
 
-public class StudentService {
+public abstract class StudentService {
 
-    public StudentService() {}
-
-    public TechmasterStudent getStudent(String branch) {
-        return switch (branch.toLowerCase()) {
-            case "it" -> new ITStudent();
-            case "biz" -> new BizStudent();
-            default -> throw new IllegalStateException("Unexpected value: " + branch.toLowerCase());
-        };
-    }
-
-    public String getRankOfStudent(TechmasterStudent student) {
+    public static double setScore(String subject, BufferedReader br) throws IOException {
         double score = 0;
-        if (student instanceof ITStudent) {
-            score = ((ITStudent) student).getScore();
-        }
-        if (student instanceof BizStudent) {
-            score = ((BizStudent) student).getScore();
-        }
-        if (score < 5) return "Yeu";
-        if (score < 6.5) return "Trung Binh";
-        if (score < 8.5) return "Kha";
-        else return "Gioi";
+        do {
+            System.out.print("Nhap diem " + subject +": ");
+            score = Double.parseDouble(br.readLine());
+
+            if (score < 0 || score > 10) {
+                System.out.println("Hay nhap diem > 0 va <= 10.");
+            }
+        } while(score < 0 || score > 10);
+        return score;
     }
 }

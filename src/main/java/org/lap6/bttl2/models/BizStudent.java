@@ -1,4 +1,4 @@
-package org.lap6.bttl2;
+package org.lap6.bttl2.models;
 
 public class BizStudent extends TechmasterStudent {
 
