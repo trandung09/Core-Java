@@ -24,9 +24,9 @@ public class StudentService {
         if (student instanceof BizStudent) {
             score = ((BizStudent) student).getScore();
         }
-        if (score < 5) return "Y";
-        if (score < 7) return "K";
-        if (score < 9) return "T";
-        else return "XS";
+        if (score < 5) return "Yeu";
+        if (score < 6.5) return "Trung Binh";
+        if (score < 8.5) return "Kha";
+        else return "Gioi";
     }
 }

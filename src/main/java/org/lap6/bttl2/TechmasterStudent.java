@@ -19,5 +19,6 @@ public abstract class TechmasterStudent {
     public void printAllInfo() {
         System.out.println("Name: " + name);
         System.out.println("Branch: " + branch);
+        System.out.println("Score: " + getScore());
     }
 }

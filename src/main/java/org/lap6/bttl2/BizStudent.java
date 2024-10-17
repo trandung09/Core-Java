@@ -6,6 +6,12 @@ public class BizStudent extends TechmasterStudent {
 
     public BizStudent() {}
 
+    public BizStudent(String name, String branch, double sale, double marketing) {
+        super(name, branch);
+        this.sale = sale;
+        this.marketing = marketing;
+    }
+
     @Override
     public double getScore() {
         return (marketing * 2 + sale) / 3;

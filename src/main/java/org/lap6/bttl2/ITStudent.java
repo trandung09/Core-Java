@@ -31,10 +31,4 @@ public class ITStudent extends TechmasterStudent {
         System.out.println("HTML Score: " + htmlScore);
         System.out.println("CSS Score: " + cssScore);
     }
-
-    public static void main(String[] args) {
-
-        ITStudent st = new ITStudent("A", "IT", 10, 8, 9);
-        st.printAllInfo();
-    }
 }
