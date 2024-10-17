@@ -1,6 +1,5 @@
 package org.lap6.bttl2;
 
-import org.lap6.bttl2.Services.TechmasterStudentService;
 import org.lap6.bttl2.models.TechmasterStudent;
 
 import java.io.BufferedReader;

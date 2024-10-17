@@ -1,5 +1,7 @@
-package org.lap6.bttl2.Services;
+package org.lap6.bttl2;
 
+import org.lap6.bttl2.Services.BizStudentService;
+import org.lap6.bttl2.Services.ITStudentService;
 import org.lap6.bttl2.models.BizStudent;
 import org.lap6.bttl2.models.ITStudent;
 import org.lap6.bttl2.models.TechmasterStudent;
