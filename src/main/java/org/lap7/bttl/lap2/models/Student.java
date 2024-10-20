@@ -9,14 +9,14 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Student {
 
-    private static int INCREMENT_ID = 0;
+    private static int AUTO_INCREMENT_ID = 0;
 
     private int id;
     private String name;
     private double scoreMath, scorePhysic, scoreChemistry;
 
     public Student(String name, double scoreMath, double scorePhysic, double scoreChemistry) {
-        this.id = INCREMENT_ID++;
+        this.id = AUTO_INCREMENT_ID++;
         this.scoreMath = scoreMath;
         this.name = name;
         this.scorePhysic = scorePhysic;

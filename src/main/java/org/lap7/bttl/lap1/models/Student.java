@@ -1,6 +1,5 @@
 package org.lap7.bttl.lap1.models;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Student {
 
-    private static int INCRE_ID = 0;
+    private static int AUTO_INCREMENT_ID = 0;
 
     private int id;
     private String name;
@@ -18,7 +17,7 @@ public class Student {
 
     public Student(String name, int age) {
 
-        this.id = INCRE_ID++;
+        this.id = AUTO_INCREMENT_ID++;
         this.name = name;
         this.age = age;
     }

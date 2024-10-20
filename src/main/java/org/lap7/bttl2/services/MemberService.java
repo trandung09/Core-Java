@@ -19,7 +19,7 @@ public class MemberService {
         String gender = br.readLine();
         System.out.print("Enter member birth date: ");
         String birthDate = br.readLine();
-        LocalDate birth = LocalDate.parse(birthDate, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        LocalDate birth = LocalDate.parse(birthDate, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
         return new Member(name, gender, birth);
     }

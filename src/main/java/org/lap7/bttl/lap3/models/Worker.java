@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Worker {
 
-    private static int INCREMENT_ID = 0;
+    private static int AUTO_INCREMENT_ID = 0;
 
     private int id;
     private String name;
@@ -19,7 +19,7 @@ public class Worker {
 
     public Worker(String name, int age, String workPlace, double salary) {
 
-        this.id = INCREMENT_ID++;
+        this.id = AUTO_INCREMENT_ID++;
 
         this.name = name;
         this.workPlace = workPlace;
