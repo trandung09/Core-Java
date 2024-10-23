@@ -29,11 +29,10 @@ public class Application {
 
         } while (answer.equalsIgnoreCase("y"));
 
-        for (Student student : students) {
-            if (student == null) break;
+        studentService.printStudentInfo(students);
 
-            studentService.printStudentInfo(students);
-        }
+        System.out.print("A: ");
+        System.out.print(studentService.getPercentByScore(students, "C") + "%");
     }
 
     public static void main(String[] args) throws IOException {

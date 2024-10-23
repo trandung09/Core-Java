@@ -1,4 +1,4 @@
-package org.lap9.models;
+package org.lap9.bttl1.models;
 
 import lombok.Getter;
 import lombok.Setter;

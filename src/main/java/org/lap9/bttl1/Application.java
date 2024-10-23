@@ -1,7 +1,7 @@
-package org.lap9;
+package org.lap9.bttl1;
 
-import org.lap9.models.Class;
-import org.lap9.models.TechMaster;
+import org.lap9.bttl1.models.Class;
+import org.lap9.bttl1.models.TechMaster;
 
 import java.io.IOException;
 

@@ -1,28 +1,25 @@
-package org.lap9.services;
+package org.lap9.bttl2.services;
 
-import org.lap9.models.Student;
+import org.lap9.bttl2.models.Student;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class StudentService {
 
     private StudentService() {}
 
     public Student getStudent(BufferedReader br) throws IOException {
-
         System.out.print("Enter student name: ");
         String name = br.readLine();
-        System.out.print("Enter student age: ");
-        int age = Integer.parseInt(br.readLine());
-        System.out.print("Enter student academic ability: ");
-        String academicAbility = br.readLine();
+        System.out.print("Enter student birth date: ");
+        String birthDate = br.readLine();
+        System.out.print("Enter student address: ");
+        String address = br.readLine();
 
-        return new Student(name, age, academicAbility);
-    }
-
-    public void updateAcademicAbilityOfStudent(Student student, String academicAbility) {
-        student.setAcademicAbility(academicAbility);
+        return new Student(name, LocalDate.parse(birthDate, DateTimeFormatter.ofPattern("d-M-yy")), address);
     }
 
     public static StudentService getInstance() {

@@ -10,13 +10,13 @@ public class StudentService {
 
     public Student getStudent(BufferedReader br) throws IOException {
 
-        System.out.println("Nhap ten sinh vien: ");
+        System.out.print("Nhap ten sinh vien: ");
         String name = br.readLine();
-        System.out.println("Nhap diem toan: ");
+        System.out.print("Nhap diem toan: ");
         double mathScore = Double.parseDouble(br.readLine());
-        System.out.println("Nhap diem vat ly: ");
+        System.out.print("Nhap diem vat ly: ");
         double physicScore = Double.parseDouble(br.readLine());
-        System.out.println("Nhap diem hoa hoc: ");
+        System.out.print("Nhap diem hoa hoc: ");
         double chemicalScore = Double.parseDouble(br.readLine());
         return new Student(name, mathScore, physicScore, chemicalScore);
     }
@@ -40,9 +40,12 @@ public class StudentService {
     public double getPercentByScore(ArrayList<Student> students, String rank) {
         int count = 0;
         for (Student student : students) {
-            if (rank.equalsIgnoreCase(getStudentRank(student))) count++;
+            String srank = getStudentRank(student);
+            if (srank.equalsIgnoreCase(rank)) {
+                count++;
+            }
         }
-        return (double) (count / students.size()) * 100;
+        return (1.0 * count / students.size()) * 100;
     }
 
     public static StudentService getInstance() {

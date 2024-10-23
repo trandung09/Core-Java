@@ -1,8 +1,8 @@
-package org.lap9.models;
+package org.lap9.bttl1.models;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.lap9.services.StudentService;
+import org.lap9.bttl1.services.StudentService;
 
 import java.util.ArrayList;
 import java.util.List;

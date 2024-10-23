@@ -1,10 +1,10 @@
-package org.lap9;
+package org.lap9.bttl1;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.lap9.models.Student;
-import org.lap9.models.TechMaster;
-import org.lap9.services.StudentService;
+import org.lap9.bttl1.models.Student;
+import org.lap9.bttl1.models.TechMaster;
+import org.lap9.bttl1.services.StudentService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
